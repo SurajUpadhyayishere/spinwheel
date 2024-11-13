@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Font */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.wheel-container {
+    text-align: center;
+}
+
+.wheel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #f1f1f1;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 4s ease-out;
+}
+
+.slice {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 3px solid #fff;
+    border-radius: 0 100% 0 100%;
+    transform-origin: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slice span {
+    position: absolute;
+    width: 100%;
+    transform: rotate(-30deg);
+    color: #000; /* Text color set to black */
+    font-weight: 600;
+    font-size: 12px; /* Adjusted font size */
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2; /* Adjust line-height for better text fit */
+}
+
+.slice1 { transform: rotate(0deg); background-color: #ff5252; }
+.slice2 { transform: rotate(60deg); background-color: #ffd700; }
+.slice3 { transform: rotate(120deg); background-color: #32cd32; }
+.slice4 { transform: rotate(180deg); background-color: #1e90ff; }
+.slice5 { transform: rotate(240deg); background-color: #ff4500; }
+.slice6 { transform: rotate(300deg); background-color: #8a2be2; }
+
+/* Align text correctly in each slice */
+.slice1 span { transform: rotate(-0deg); }
+.slice2 span { transform: rotate(-60deg); }
+.slice3 span { transform: rotate(-120deg); }
+.slice4 span { transform: rotate(-180deg); }
+.slice5 span { transform: rotate(-240deg); }
+.slice6 span { transform: rotate(-300deg); }
+
+#spin-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+#spin-btn:hover {
+    background-color: #555;
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
